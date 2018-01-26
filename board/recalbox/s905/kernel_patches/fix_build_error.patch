@@ -1,6 +1,6 @@
 diff -Naur a/arch/arm64/Makefile b/arch/arm64/Makefile
---- a/arch/arm64/Makefile	2018-01-15 16:24:23.228419139 +0800
-+++ b/arch/arm64/Makefile	2018-01-15 16:25:34.752140616 +0800
+--- a/arch/arm64/Makefile	2018-01-15 23:42:00.806287795 +0800
++++ b/arch/arm64/Makefile	2018-01-15 23:41:03.794515482 +0800
 @@ -35,14 +35,21 @@
  
  CHECKFLAGS	+= -D__aarch64__
@@ -34,7 +34,7 @@ diff -Naur a/arch/arm64/Makefile b/arch/arm64/Makefile
  %.dtb: scripts
 -	$(if $(filter $@,$(mesondtb)),\
 -	$(Q)$(MAKE) $(build)=$(boot)/dts/amlogic $(boot)/dts/amlogic/$@,\
--	$(Q)$(MAKE) $(build)=customer/$(boot)/dts customer/$(boot)/dts/$@)
+-	$(Q)$(MAKE) $(build)=$(boot)/dts $(boot)/dts/$@)
 +	$(Q)$(MAKE) $(build)=$(boot)/dts $(boot)/dts/$@
  
  dtbs: scripts
