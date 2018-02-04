@@ -208,6 +208,11 @@ case "${RECALBOX_TARGET}" in
 	cp "${BINARIES_DIR}/gxbb_p200.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
 	cp "${BINARIES_DIR}/gxl_p212_1g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
 	cp "${BINARIES_DIR}/gxl_p212_2g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
+	cp "${BINARIES_DIR}/gxl_p230_2g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
+	cp "${BINARIES_DIR}/gxl_p231_1g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
+	cp "${BINARIES_DIR}/gxl_p231_2g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
+	cp "${BINARIES_DIR}/gxl_p241_1g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
+	cp "${BINARIES_DIR}/gxl_p281_1g.dtb" "${BINARIES_DIR}/boot/boot" || exit 1
 
 	# boot.tar.xz
 	echo "creating boot.tar.xz"
