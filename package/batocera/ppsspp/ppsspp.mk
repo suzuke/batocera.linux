@@ -3,7 +3,9 @@
 # PPSSPP
 #
 ################################################################################
-PPSSPP_VERSION = 3eaa81570443506a1e8dd26217c7700854628a77
+PPSSPP_VERSION = c27d64f273c231241e84498eb9392fbc05635780
+#5d77c63216f413285a4e0acda37246fbea10b280
+#3eaa81570443506a1e8dd26217c7700854628a77
 #PPSSPP_SITE = $(call github,hrydgard,ppsspp,$(PPSSPP_VERSION))
 PPSSPP_SITE = https://github.com/hrydgard/ppsspp.git
 PPSSPP_SITE_METHOD=git
@@ -28,12 +30,7 @@ endef
 
 PPSSPP_INSTALL_TARGET_CMDS = $(PPSSPP_INSTALL_TO_TARGET)
 
-ifeq ($(BR2_aarch64),y)
-# -DUSE_SYSTEM_FFMPEG=1 is unstable, but at least, games without videos work
-PPSSPP_CONF_OPTS += -DUSE_FFMPEG=1 -DUSE_SYSTEM_FFMPEG=1
-else
 PPSSPP_CONF_OPTS += -DUSE_FFMPEG=1
-endif
 
 ifeq ($(BR2_PACKAGE_MALI_OPENGLES_SDK),y)
 	PPSSPP_CONF_OPTS += -DUSING_FBDEV=1
